@@ -31,15 +31,39 @@ h6 {
 /*---------------------------------------------
 					Navbar
 -----------------------------------------------*/
+.navbar .icon {
+  margin-left: .25rem;
+}
+.navbar-brand {
+  margin-right: -30px !important;
+  margin-bottom: -28px;
+  background: white;
+  border-radius: 50%;
+}
+.navbar-brand .navbar-item {
+  padding: .5rem 4rem;
+}
 .navbar-brand img {
   max-height: 9rem;
 }
 .navbar-start {
-  margin: auto;
+  margin-right: -32px;
 }
 .navbar-item {
   font-size: 1.5rem;
-  padding: 0.5rem 1.75rem;
+  padding: 0.5rem 2.75rem;
+  padding-top: 4rem;
+  font-weight: 400;
+}
+.navbar-dropdown .navbar-item {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+.navbar-link {
+  padding-top: 4rem;
+}
+.navbar-link::after {
+  margin-top: 1rem;
 }
 .icon.facebook {
   width: 50px; height: 50px;
@@ -54,7 +78,7 @@ h6 {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
-  padding: 4rem 0 4rem 0;
+  padding: 5rem 0;
   position: relative;
   margin-bottom: 4rem;
   background-image: url(../img/rentfun/main.jpg);
@@ -80,7 +104,7 @@ h6 {
 #home-main .block h1 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  font-size: 65px;
+  font-size: 45px;
   line-height: 60px;
   letter-spacing: 2px;
   padding-bottom: 45px;
@@ -184,3 +208,16 @@ and (max-device-width: 768px) {
     background-image: url(../img/rentfun/main-small.jpg);
   }
 }
+
+
+
+/*---------------------------------------------
+					Main
+-----------------------------------------------*/
+.main header {
+  color: white;
+  background: #ef4323;
+  padding: 3rem 0;
+  font-size: 3rem;
+}
+

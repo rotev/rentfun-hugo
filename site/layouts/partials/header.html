@@ -1,58 +1,60 @@
 <!-- Header Start -->
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="img/rentfun/logo.png">
-      </a>
-
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div class="navbar-menu" id="navbarMenu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          מי אנחנו?
+<header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{{ .Site.BaseURL }}">
+          <img src="{{ .Site.BaseURL }}img/rentfun/logo.png">
         </a>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            פעילויות
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="navbarMenu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            מי אנחנו?
           </a>
 
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              סדנה להכנת מריונטות
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              פעילויות
             </a>
-            <a class="navbar-item">
-              יריד הפעלות
-            </a>
-            <a class="navbar-item">
-              סדנת פעלולנות
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              סדנה להכנת פויז
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                סדנה להכנת מריונטות
+              </a>
+              <a class="navbar-item">
+                יריד הפעלות
+              </a>
+              <a class="navbar-item">
+                סדנת פעלולנות
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                סדנה להכנת פויז
+              </a>
+            </div>
+          </div>
+
+          <a class="navbar-item">
+            צרי קשר
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a href="https://www.facebook.com/rentfun.israel/" title="בקרו אותנו בפייסבוק">
+              <i class="icon facebook"></i>
             </a>
           </div>
         </div>
-
-        <a class="navbar-item">
-          צרי קשר
-        </a>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://www.facebook.com/rentfun.israel/" title="בקרו אותנו בפייסבוק">
-            <i class="icon facebook"></i>
-          </a>
-        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
