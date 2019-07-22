@@ -55,10 +55,10 @@ theme = "airspace-hugo"
 
   [params.slider]
     enable = true
-    title = "פעילויות חוויתיות לילדים"
+    title = "סדנאות מצוינות לילדים"
     subtitle = "חוויה להשכיר ממקמת באירוע שלך פעילויות חוויתיות במהירות וביעילות, תוך הקפדה על איכות התכנים, ההדרכה והחומרים."
     bgImage = "img/rentfun/main.jpg"
-    btnText = "Discover Our Projects"
+    btnText = "הזמיני עכשיו"
     url = "#"
 
   [params.wrapper]
