@@ -57,6 +57,7 @@ h6 {
   padding: 4rem 0 4rem 0;
   position: relative;
   margin-bottom: 4rem;
+  background-image: url(../img/rentfun/main.jpg);
 }
 
 #home-main:before {
@@ -148,4 +149,38 @@ h6 {
 
 #activities p {
   margin-bottom: 1rem;
+}
+
+
+@media only screen 
+and (min-device-width: 769px) 
+and (max-device-width: 1087px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+  #activities ul {
+    grid-template-columns: 45% 45%;
+  }
+}
+
+@media only screen 
+and (max-device-width: 768px) {
+  #activities ul {
+    grid-template-columns: 100%;
+    grid-gap: unset;
+  }
+  #activities img {
+    width: 40%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .container {
+    padding: 0 10%;
+  }
+  .navbar-brand {
+    align-items: center;
+  }
+  #home-main {
+    background-image: url(../img/rentfun/main-small.jpg);
+  }
 }
