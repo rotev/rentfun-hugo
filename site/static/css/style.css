@@ -54,8 +54,9 @@ h6 {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
-  padding: 100px 0 100px 0;
+  padding: 4rem 0 4rem 0;
   position: relative;
+  margin-bottom: 4rem;
 }
 
 #home-main:before {
@@ -96,3 +97,55 @@ h6 {
   margin-bottom: 2em;
 }
 
+/*---------------------------------------------
+					Activities
+-----------------------------------------------*/
+
+#activities {
+  padding-bottom: 4rem;
+  border-bottom: 4px solid #ef4323;
+  margin-bottom: 4rem;
+}
+
+#activities ul {
+  display: grid;
+  grid-template-columns: 27% 27% 26%;
+  grid-gap: 10%;
+  padding-bottom: 4rem;
+}
+
+#activities .all-activities {
+  margin: auto;
+  width: fit-content;
+  display: block;
+}
+
+#activities li {
+
+}
+#activities img {
+  width: 70%;
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+}
+#activities a:hover img {
+  box-shadow: 0 0 15px rgba(239, 67, 35, .5);
+}
+
+#activities h2 {
+  border-bottom: 2px dashed rgba(239, 67, 35, .5);
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+#activities a:hover h2 {
+  color: #ef4323;
+  border-bottom: 2px dashed #ef4323;
+}
+
+#activities p {
+  margin-bottom: 1rem;
+}
