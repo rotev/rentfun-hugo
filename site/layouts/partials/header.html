@@ -21,24 +21,16 @@
           </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
+            <a href="{{ .Site.BaseURL }}activities" class="navbar-link">
               פעילויות
             </a>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item">
-                סדנה להכנת מריונטות
-              </a>
-              <a class="navbar-item">
-                יריד הפעלות
-              </a>
-              <a class="navbar-item">
-                סדנת פעלולנות
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                סדנה להכנת פויז
-              </a>
+              {{ range $.Site.Data.activities }}
+                <a href="{{ .Site.BaseURL }}activities/{{ .slug }}" class="navbar-item">
+                  {{ .name }}
+                </a>
+              {{ end }}
             </div>
           </div>
 

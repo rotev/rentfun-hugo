@@ -15,6 +15,22 @@
         <h1>פעילויות</h1>
       </div>
     </header>
+
+    <div id="activities" class="container">
+      <ul>
+        {{ range $.Site.Data.activities }}
+          <li>
+              <a href="">
+                  {{ .Site.BaseUrl }}
+                <img src="/img/rentfun/activities/{{ .image }}" />
+                <h2>{{ .name }}</h2>
+              </a>
+              <p>{{ .description }}</p>
+              <a href="{{ .Site.BaseUrl }}activities/{{ .slug }}" class="button">קראי עוד</a>          
+          </li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
 
 </body>
