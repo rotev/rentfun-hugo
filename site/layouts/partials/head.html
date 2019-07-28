@@ -16,16 +16,19 @@
 <title>{{ .Title }}</title>
 
 {{ hugo.Generator }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/bulma-rtl.css" />
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/ionicons.min.css" />
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/animate.css" />
-{{ "<!-- Main Stylesheet -->" | safeHTML }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
 
+{{ $stylesheet := .Site.Data.webpack.main }}
+{{ with $stylesheet.css }}
+  <link href="{{ relURL . }}" rel="stylesheet">
+{{ end }}
 
 <!-- Js -->
 <script async src="{{ .Site.BaseURL }}js/main.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
 <!--
 /*
