@@ -29,17 +29,3 @@
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-
-<!--
-/*
- * Airspace
- * Ported to Hugo by Giacomo Mariani
- * https://github.com/karju-dev/airspace-hugo
- * Based on the original Jakyll porting by Andrew Lee
- * https://github.com/luminousrubyist/airspace-jekyll
- * Designed and Developed by ThemeFisher
- * https://themefisher.com/
- *
- */
--->
-{{- partial "head_custom.html" . }}

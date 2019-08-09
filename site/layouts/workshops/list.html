@@ -5,7 +5,7 @@
 	{{ partial "head.html" . }}
 
 </head>
-<body id="activities-page">
+<body id="workshops-page">
 
 	{{ partial "header.html" . }}
 
@@ -16,17 +16,17 @@
       </div>
     </header>
 
-    <div id="activities" class="container">
+    <div id="workshops" class="container">
       <ul>
-        {{ range $.Site.Data.activities }}
+        {{ range $.Site.Data.workshops }}
           <li>
               <a href="">
                   {{ .Site.BaseUrl }}
-                <img src="/img/rentfun/activities/{{ .image }}" />
+                <img src="/img/rentfun/סדנאות/{{ .image }}" />
                 <h2>{{ .name }}</h2>
               </a>
               <p>{{ .description }}</p>
-              <a href="{{ .Site.BaseUrl }}activities/{{ .slug }}" class="button">קראי עוד</a>          
+              <a href="{{ .Site.BaseUrl }}סדנאות/{{ .slug }}" class="button">קראי עוד</a>          
           </li>
         {{ end }}
       </ul>

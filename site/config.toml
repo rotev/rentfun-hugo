@@ -8,8 +8,6 @@ title = "חוויה להשכיר"
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
-theme = "airspace-hugo"
-
 [params]
   home = "Home"
 

@@ -1,19 +1,19 @@
-<div id="activities">
+<div id="workshops">
   <div class="container">
     <ul>
-      {{ range first 3 $.Site.Data.activities }}
+      {{ range first 3 $.Site.Data.workshops }}
         <li>
             <a href="">
-              <img src="img/rentfun/activities/{{ .image }}" />
+              <img src="img/rentfun/סדנאות/{{ .image }}" />
               <h2>{{ .name }}</h2>
             </a>
             <p>{{ .description }}</p>
-            <a href="{{ .Site.BaseUrl }}activities/{{ .slug }}" class="button">קראי עוד</a>          
+            <a href="{{ .Site.BaseUrl }}סדנאות/{{ .slug }}" class="button">קראי עוד</a>          
         </li>
       {{ end }}
     </ul>
 
-    <a href="{{ .Site.BaseURL }}activities" class="all-activities button is-primary is-large">
+    <a href="{{ .Site.BaseURL }}סדנאות" class="all-workshops button is-primary is-large">
       <span>כל הסדנאות שלנו</span>
       <span class="icon is-medium">
         <i class="fas fa-angle-double-left"></i>

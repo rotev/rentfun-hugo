@@ -21,13 +21,14 @@
           </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
-            <a href="{{ .Site.BaseURL }}activities" class="navbar-link">
+            {{ ref . "/workshops/_index.md" }}
+            <a href="{{ .Site.BaseURL }}סדנאות" class="navbar-link">
               פעילויות
             </a>
 
             <div class="navbar-dropdown">
-              {{ range $.Site.Data.activities }}
-                <a href="{{ .Site.BaseURL }}activities/{{ .slug }}" class="navbar-item">
+              {{ range $.Site.Data.workshops }}
+                <a href="{{ .Site.BaseURL }}סדנאות/{{ .slug }}" class="navbar-item">
                   {{ .name }}
                 </a>
               {{ end }}
