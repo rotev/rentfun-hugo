@@ -2,11 +2,11 @@ baseurl = "/"
 languageCode = "he-us"
 languageLang = "he"
 title = "חוויה להשכיר"
+sectionPagesMenu = "main"
+disableKinds = ["RSS"]
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+[taxonomies]
+  workshop = "workshops"
 
 [params]
   home = "Home"

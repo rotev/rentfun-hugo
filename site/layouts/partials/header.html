@@ -16,28 +16,30 @@
 
       <div class="navbar-menu" id="navbarMenu">
         <div class="navbar-start">
-          <a class="navbar-item">
-            מי אנחנו?
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            {{ ref . "/workshops/_index.md" }}
-            <a href="{{ .Site.BaseURL }}סדנאות" class="navbar-link">
-              פעילויות
-            </a>
-
-            <div class="navbar-dropdown">
-              {{ range $.Site.Data.workshops }}
-                <a href="{{ .Site.BaseURL }}סדנאות/{{ .slug }}" class="navbar-item">
-                  {{ .name }}
-                </a>
-              {{ end }}
-            </div>
-          </div>
-
-          <a class="navbar-item">
-            צרי קשר
-          </a>
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            {{ if .Page.Pages }}
+              <div class="navbar-item has-dropdown is-hoverable">
+                  <a href="{{ .URL }}" class="navbar-link">
+                    {{ .Name }}
+                  </a>
+                  <div class="navbar-dropdown">
+                    {{ range .Page.Pages }}
+                      <a href="{{ .URL }}" class="navbar-item">
+                        {{ .Name }}
+                      </a>
+                    {{ end }}
+                  </div>
+              </div>
+            {{ else }}
+              <a
+                class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
+                href="{{ .URL }}"
+                title="{{ .Title }}">
+                {{ .Name }}
+              </a>
+            {{ end }}
+          {{ end }}
         </div>
 
         <div class="navbar-end">
