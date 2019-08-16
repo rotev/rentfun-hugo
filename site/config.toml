@@ -2,11 +2,10 @@ baseurl = "/"
 languageCode = "he-us"
 languageLang = "he"
 title = "חוויה להשכיר"
-sectionPagesMenu = "main"
 disableKinds = ["RSS"]
 
-[taxonomies]
-  workshop = "workshops"
+[permalinks]
+  workshops = "/סדנאות/:title"
 
 [params]
   home = "Home"
