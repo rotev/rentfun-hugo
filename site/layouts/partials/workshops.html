@@ -1,15 +1,19 @@
 <div id="workshops">
   <div class="container">
     <ul>
-      {{ range first 3 $.Site.Data.workshops }}
-        <li>
-            <a href="">
-              <img src="img/rentfun/סדנאות/{{ .image }}" />
-              <h2>{{ .name }}</h2>
-            </a>
-            <p>{{ .description }}</p>
-            <a href="{{ .Site.BaseUrl }}סדנאות/{{ .slug }}" class="button">קראי עוד</a>          
-        </li>
+      {{ with $.Site.GetPage "/workshops" }}
+        {{ range first 3 .Pages }}
+          <li>
+              <a href="{{ .Permalink }}">
+                {{ with .Resources.GetMatch "icon" }}
+                  <img src="{{ .RelPermalink }}" />
+                {{ end }}
+                <h2>{{ .Title }}</h2>
+              </a>
+              <p>{{ .Summary }}</p>
+              <a href="{{ .Permalink }}" class="button">קראי עוד</a>          
+          </li>
+        {{ end }}
       {{ end }}
     </ul>
 
